@@ -1,0 +1,2 @@
+class TeamMatchupsController < ApplicationController
+end
