@@ -45,11 +45,6 @@ Team.create(teams)
 Season.create(year: "2020/2021")
 
 weeks = [
-    {number: 6, season_id: 1}, 
-    {number: 7, season_id: 1}, 
-    {number: 8, season_id: 1}, 
-    {number: 9, season_id: 1}, 
-    {number: 10, season_id: 1}, 
     {number: 11, season_id: 1}, 
     {number: 12, season_id: 1}, 
     {number: 13, season_id: 1}, 
@@ -60,65 +55,65 @@ weeks = [
 Week.create(weeks)
 
 matchups = [
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}, 
-    {week_id: 6}
+    {week_id: 6, spread: 6, ou: 53.5}, 
+    {week_id: 6, spread: 4.5, ou: 50.5}, 
+    {week_id: 6, spread: 13, ou: 46.5}, 
+    {week_id: 6, spread: 4, ou: 50.5}, 
+    {week_id: 6, spread: 11, ou: 58.5}, 
+    {week_id: 6, spread: 2.5, ou: 44.5}, 
+    {week_id: 6, spread: 1, ou: 56.5}, 
+    {week_id: 6, spread: 0, ou: 52}, 
+    {week_id: 6, spread: 4.5, ou: 50.5}, 
+    {week_id: 6, spread: 4.5, ou: 50.5}, 
+    {week_id: 6, spread: 4.5, ou: 50.5}, 
+    {week_id: 6, spread: 4.5, ou: 50.5}, 
+    {week_id: 6, spread: 4.5, ou: 50.5}, 
+    {week_id: 6, spread: 4.5, ou: 50.5}
 ]
 Matchup.create(matchups)
 
 team_matchups = [
-    {team_id: 10, matchup_id: 1}, #broncos v. 
-    {team_id: 22, matchup_id: 1}, #pats
+    {team_id: 10, matchup_id: 1, favorite: false}, #broncos v. 
+    {team_id: 22, matchup_id: 1, favorite: true}, #pats
 
-    {team_id: 13, matchup_id: 2}, #texans v. 
-    {team_id: 31, matchup_id: 2}, #titans
+    {team_id: 13, matchup_id: 2, favorite: false}, #texans v. 
+    {team_id: 31, matchup_id: 2, favorite: true}, #titans
 
-    {team_id: 8, matchup_id: 3}, #browns v. 
-    {team_id: 27, matchup_id: 3}, #steelers
+    {team_id: 8, matchup_id: 3, favorite: false}, #browns v. 
+    {team_id: 27, matchup_id: 3, favorite: true}, #steelers
 
-    {team_id: 3, matchup_id: 4}, #ravens v. 
-    {team_id: 26, matchup_id: 4}, #eagles
+    {team_id: 3, matchup_id: 4, favorite: true}, #ravens v. 
+    {team_id: 26, matchup_id: 4, favorite: false}, #eagles
 
-    {team_id: 32, matchup_id: 5}, #washington v. 
-    {team_id: 24, matchup_id: 5}, #giants
+    {team_id: 32, matchup_id: 5, favorite: false}, #washington v. 
+    {team_id: 24, matchup_id: 5, favorite: true}, #giants
 
-    {team_id: 2, matchup_id: 6}, #falcons v. 
-    {team_id: 21, matchup_id: 6}, #vikings
+    {team_id: 2, matchup_id: 6, favorite: true}, #falcons v. 
+    {team_id: 21, matchup_id: 6, favorite: false}, #vikings
 
-    {team_id: 11, matchup_id: 7}, #lions v. 
-    {team_id: 15, matchup_id: 7}, #jags
+    {team_id: 11, matchup_id: 7, favorite: true}, #lions v. 
+    {team_id: 15, matchup_id: 7, favorite: false}, #jags
 
-    {team_id: 7, matchup_id: 8}, #bengals v. 
-    {team_id: 14, matchup_id: 8}, #colts
+    {team_id: 7, matchup_id: 8, favorite: false}, #bengals v. 
+    {team_id: 14, matchup_id: 8, favorite: true}, #colts
 
-    {team_id: 6, matchup_id: 9}, #bears v. 
-    {team_id: 5, matchup_id: 9}, #panthers
+    {team_id: 6, matchup_id: 9, favorite: true}, #bears v. 
+    {team_id: 5, matchup_id: 9, favorite: false}, #panthers
 
-    {team_id: 25, matchup_id: 10}, #jets v. 
-    {team_id: 20, matchup_id: 10}, #dolphins
+    {team_id: 25, matchup_id: 10, favorite: false}, #jets v. 
+    {team_id: 20, matchup_id: 10, favorite: true}, #dolphins
 
-    {team_id: 12, matchup_id: 11}, #packers v. 
-    {team_id: 30, matchup_id: 11}, #buccs
+    {team_id: 12, matchup_id: 11, favorite: true}, #packers v. 
+    {team_id: 30, matchup_id: 11, favorite: false}, #buccs
 
-    {team_id: 19, matchup_id: 12}, #rams v. 
-    {team_id: 28, matchup_id: 12}, #49ers
+    {team_id: 19, matchup_id: 12, favorite: true}, #rams v. 
+    {team_id: 28, matchup_id: 12, favorite: false}, #49ers
 
-    {team_id: 16, matchup_id: 13}, #chiefs v. 
-    {team_id: 4, matchup_id: 13}, #bills
+    {team_id: 16, matchup_id: 13, favorite: true}, #chiefs v. 
+    {team_id: 4, matchup_id: 13, favorite: false}, #bills
 
-    {team_id: 1, matchup_id: 14}, #cards v. 
-    {team_id: 9, matchup_id: 14} #cowboys
+    {team_id: 1, matchup_id: 14, favorite: true}, #cards v. 
+    {team_id: 9, matchup_id: 14, favorite: false} #cowboys
 ]
 
 TeamMatchup.create(team_matchups)
