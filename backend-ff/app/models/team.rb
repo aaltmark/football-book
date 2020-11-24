@@ -1,3 +1,3 @@
 class Team < ApplicationRecord
-    has_many :team_matchups
+    has_many :matchups
 end
